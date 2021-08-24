@@ -23,11 +23,10 @@ The goal of the project is to record environmental variables continuously over y
 * Jumper wires
 
 # Software 
-
-All the essentials can be found under the Main_Folder. 
+Here is a breif description of each program
 * **The config.py** file can be modified by the user if ever they want to change something such as the time interval between scans or the I2C addresses for the sensors.
 * **The MAIN_PROGRAM.py** does the data collection and the data upload.
-* **The Sensors_Functions.py** is responsible for obtaining readings for all the sensors and for formatting the data that will be sent to the database. A python function is created for each sensor, and when called, returns a reading from that particular sensor. 
+* **The Sensors_Functions.py** is responsible for obtaining readings for all the sensors and for formatting the data. A python function is created for each sensor, and when called, returns a reading from that particular sensor. 
 
 ## Data File Format
 The data being acquired is stored with headers....
@@ -39,7 +38,7 @@ The data being acquired is stored with headers....
 * **Differential_Pressure_Pa:** This is the difference in pressure between the 2 nobs on the SDP810, measured in Pascale. Once the SDP810 is placed inside the case, it will measure the pressure from the nozzle on right minus the pressure of the nozzle on the left, when viewed from this angle: ![photo](DOCS/Photos/SDPNozzle.jpg)
 
 
-It can give out both positive and negative values for the pressure difference, depending on which nozzle reads a higher pressure. This information comes from a diagram from this [data sheet](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/8_Differential_Pressure/Datasheets/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf data sheet). 
+It can give out both positive and negative values for the pressure difference, depending on which nozzle reads a higher pressure. This information comes from a diagram from this [data sheet](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/8_Differential_Pressure/Datasheets/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf). 
 ![photo](DOCS/Photos/SDP810_Sketch.png)
 
 The sensor will return the difference between the High pressure nozzle to the Low pressure one in the diagram.
@@ -48,7 +47,7 @@ The sensor will return the difference between the High pressure nozzle to the Lo
 * **MC2point5um_ug_per_m3:** This measures the mass concentration of particles between 0.3um to 2.5um for a given volume of 1 meter cube in ug. In other words, take 1 meter cube of air and weigh all the particles between 0.3um and 2.5um and the total mass is the returned final reading (in ug). 
 * **MC4um_ug_per_m3:** This measures the mass concentration of particles between 0.3um to 4um for a given volume of 1 meter cube in ug. In other words, take 1 meter cube of air and weigh all the particles between 0.3um and 4um and the total mass the final reading. 
 * **MC10um_ug_per_m3:** This measures the mass concentration of particles between 0.3um to 10um for a given volume of 1 meter cube in ug. In other words, take 1 meter cube of air and weigh all the particles between 0.3um and 10um and the total mass is the returned final reading (in ug).
-* ** 0point5um_Counts_Per_cm3:** This measures the number of particle counts between 0.3um to 0.5um for a given volume of 1 centimeter cube. In other words, take 1 centimeter cube of air and count all the particles between 0.3um and 0.5um and return the number of counts.
+* **0point5um_Counts_Per_cm3:** This measures the number of particle counts between 0.3um to 0.5um for a given volume of 1 centimeter cube. In other words, take 1 centimeter cube of air and count all the particles between 0.3um and 0.5um and return the number of counts.
 * **1um_Counts_Per_cm3:** This measures the number of particle counts between 0.3um to 1um for a given volume of 1 centimeter cube. In other words, take 1 centimeter cube of air and count all the particles between 0.3um and 1um and return the number of counts.
 * **2point5um_Counts_Per_cm3:** This measures the number of particle counts between 0.3um to 2.5um for a given volume of 1 centimeter cube. In other words, take 1 centimeter cube of air and count all the particles between 0.3um and 2.5um and return the number of counts.
 * **4um_Counts_Per_cm3:** This measures the number of particle counts between 0.3um to 4um for a given volume of 1 centimeter cube. In other words, take 1 centimeter cube of air and count all the particles between 0.3um and 4um and return the number of counts.
@@ -56,7 +55,7 @@ The sensor will return the difference between the High pressure nozzle to the Lo
 * **Typical_Particle_Size_um:** The typical particle size (TPS) gives an indication on the average particle diameter in the sample aerosol in um. Such output correlates with the weighted average of the number concentration bins measured with a TSI 3330 optical particle sizer. Consequently, lighter aerosols will have smaller TPS values than heavier aerosols.
 
 # Physical Design 
-Once all the components have been acquired (Raspberry Pi and sensors), a case has been designed to package everything together. The case is 3d printed and the ''SolidWorks'' design files can be found in this [https://workbench.grabcad.com/workbench/projects/gcHzfLMLa-HXbQJv8QlMMii0fpi4dDAn0PsYPM48OZWLoZ#/folder/10605921 GrabCAD project]. At the moment, we are using the '''Top_Fan_configuration''' design, where the fan lies above the Raspberry Pi to cool it off. In that folder, the '''3D print''' folder contains all the parts that have to be printed (lid, main body, fan bracket, bottom case).
+Once all the components have been acquired (Raspberry Pi and sensors), a case has been designed to package everything together. The case is 3d printed and the ''SolidWorks'' design files can be found in this [https://workbench.grabcad.com/workbench/projects/gcHzfLMLa-HXbQJv8QlMMii0fpi4dDAn0PsYPM48OZWLoZ#/folder/10605921 GrabCAD project]. At the moment, we are using the **Top_Fan_configuration** design, where the fan lies above the Raspberry Pi to cool it off. In that folder, the **3D print** folder contains all the parts that have to be printed (lid, main body, fan bracket, bottom case).
 
 ## Assembly Instructions (Top Fan Configuration)
 
@@ -65,7 +64,7 @@ To start, make sure you have all the material listed above and that the case com
 ### Fan and Bracket
 
 
-* With the use of the '''M4 nuts''' and '''M4x16mm screws''', clamp the fan onto the bracket. Ideally, the fan should be oriented such that the air should flow from below the bracket through the fan. This would ensure that the hot air is leaving the chip and going out of the case.
+* With the use of the **M4 nuts** and **M4x16mm screws**, clamp the fan onto the bracket. Ideally, the fan should be oriented such that the air should flow from below the bracket through the fan. This would ensure that the hot air is leaving the chip and going out of the case.
 Here are 2 photos showing how it should look like once attached. 
 
 ![photo](DOCS/Photos/Fan_Bracket1.jpg)

@@ -73,4 +73,8 @@ if NewSensorStatus==1:
 ```
 
 
+## Contributors
+- Felix Belair
+- Chris Chambers
+- Soud Al Kharusi
 

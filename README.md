@@ -8,7 +8,7 @@ The goal of this device is to be able to monitor air quality throughout the day 
 
 This guide is here to help you connect and set up the different sensors to the Raspberry Pi. Everything works with the default `Raspbian OS`. If one needs help installing it onto the microSD card, visit [**this site**](https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/2). If one wants to update their version, visit [**this site**](https://www.raspberrypi.org/documentation/raspbian/updating.md).
 
-Once the OS is set up, and a keyboard and mouse are plugged in, please wire up the sensors as illustrated in the [**diagram**](http://132.206.126.37/bvllab/particulate-sensor/blob/master/DOCS/Photos/Wiring_Diagram.png). There are writen instructions [**here**](http://132.206.126.37/bvllab/particulate-sensor/blob/master/DOCS/WiringDiagram.md) if ever you need more details concerning the wiring.
+Once the OS is set up, and a keyboard and mouse are plugged in, please wire up the sensors as illustrated in the [**diagram**](https://github.com/Brunner-neutrino-lab/Lab_Environmental_Monitor/blob/main/DOCS/Photos/Wiring_Diagram.png). There are writen instructions [**here**](https://github.com/Brunner-neutrino-lab/Lab_Environmental_Monitor/blob/main/DOCS/WiringDiagram.md) if ever you need more details concerning the wiring.
 
 If you are connecting an individual sensor without the use of `i2c`, you may skip over the next section, otherwise enabling the i2c interface is crucial for the sensor connection. The main program connects with all the sensors via the i2c interface. It allows for a more centralized and simple wiring scheme without using too many pins.
 
@@ -41,7 +41,7 @@ sudo pip3 install RPi.bme280
 
 Make sure everything is properly set up and that all the criteria below are met:
 - i2c is enabled on the Raspberry Pi.
-- The sensors are wired accordingly to the wiring [**diagram**](http://132.206.126.37/bvllab/particulate-sensor/blob/master/DOCS/Photos/Wiring_Diagram.png).
+- The sensors are wired accordingly to the wiring [**diagram**](https://github.com/Brunner-neutrino-lab/Lab_Environmental_Monitor/blob/main/DOCS/Photos/Wiring_Diagram.png).
 - The addresses from `i2cdetect -y 1` match the ones found in the `config.py` file.
 
 **Running when connected to a monitor and keyboard/mouse**

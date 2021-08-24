@@ -6,7 +6,6 @@ import RPi.GPIO as GPIO# this is used for the ligts
 from datetime import datetime
 if config.ParticulateStatus==1:#we'll only import the sps30 stuff if it is selected in the config file.
     from sps30 import SPS30
-import smtplib, ssl# for sending automated emails
 
 '''
 The Sensors_Functions.py program is in charge of taking readings from the sensors. 
@@ -133,11 +132,3 @@ def lights(setting,period=0):#period is in minutes and is only used for the rain
                 RED.ChangeDutyCycle(x)
                 BLUE.ChangeDutyCycle(101-x)
                 time.sleep(0.05)
-
-def send_message(message):
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-        server.login(config.sender_email, config.password)
-        server.sendmail(config.sender_email, config.receiver_email, message)
-    return None
-

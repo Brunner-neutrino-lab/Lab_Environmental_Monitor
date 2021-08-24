@@ -24,14 +24,10 @@ The goal of the project is to record environmental variables continuously over y
 
 # Software 
 
-Here is a link to the [repository](http://132.206.126.37/bvllab/particulate-sensor) responsible for gathering data and uploading it to the BvL database. All the essentials can be found under the Main_Folder. 
-* '''The config.py''' file can be modified by the user if ever they want to change something such as the time interval between scans or the I2C addresses for the sensors.
-* '''The MAIN_PROGRAM.py''' does the data collection and the data upload.
-* '''The Sensors_Functions.py''' is responsible for obtaining readings for all the sensors and for formatting the data that will be sent to the database. A python function is created for each sensor, and when called, returns a reading from that particular sensor. 
-*'''bvl_pymongodb.py ''' comes from this [repo](http://132.206.126.37/bvllab/bvl-mongodb) and is necessary for the data upload.
-
-## Data Storage Location
-The data is stored on the db thanks to the help of the bvl-MongoDB database [repo](http://132.206.126.37/bvllab/bvl-mongodb). The data is stored under the db_name '''Bvl-WeatherStation'''. The collection names will typically follow the format of LWS001-loc01. The three numbers after 'LWS' represent the version of the weather station, and the 2 numbers after 'loc' indicate the coordinates of the data taken according to this [diagram](https://tapajo.physics.mcgill.ca/neutrino/wiki/bnl/index.php/File:Pi_Placements.png).
+All the essentials can be found under the Main_Folder. 
+* **The config.py** file can be modified by the user if ever they want to change something such as the time interval between scans or the I2C addresses for the sensors.
+* **The MAIN_PROGRAM.py** does the data collection and the data upload.
+* **The Sensors_Functions.py** is responsible for obtaining readings for all the sensors and for formatting the data that will be sent to the database. A python function is created for each sensor, and when called, returns a reading from that particular sensor. 
 
 ## Data File Format
 The data being acquired is stored with headers....

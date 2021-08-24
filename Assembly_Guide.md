@@ -36,7 +36,7 @@ The data being acquired is stored with headers....
 * **Temperature_C:** This is the temperature of the lab measured in Celsius. The readings should be around 21 degrees or so.
 * **Pressure_Torr:** This is the pressure of the lab in Torr. Typically, the readings should be near 760Torr, which is the equivalent of 1 atmosphere.
 * **Percent_Humidity:** This is the relative humidity in the air. At a given temperature, air can hold a certain amount of water vapor. Here it gives the ratio between the measured amount of water vapor present to the max carrying capacity at a given temperature.
-* **Differential_Pressure_Pa:** This is the difference in pressure between the 2 nobs on the SDP810, measured in Pascale. Once the SDP810 is placed inside the case, it will measure the pressure from the nozzle on right minus the pressure of the nozzle on the left, when viewed from this angle: ![photo](main/DOCS/Photos/SDPNozzle.jpg)
+* **Differential_Pressure_Pa:** This is the difference in pressure between the 2 nobs on the SDP810, measured in Pascale. Once the SDP810 is placed inside the case, it will measure the pressure from the nozzle on right minus the pressure of the nozzle on the left, when viewed from this angle: ![photo](DOCS/Photos/SDPNozzle.jpg)
 
 
 It can give out both positive and negative values for the pressure difference, depending on which nozzle reads a higher pressure. This information comes from a diagram from this [data sheet](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/8_Differential_Pressure/Datasheets/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf data sheet). 
@@ -68,9 +68,9 @@ To start, make sure you have all the material listed above and that the case com
 * With the use of the '''M4 nuts''' and '''M4x16mm screws''', clamp the fan onto the bracket. Ideally, the fan should be oriented such that the air should flow from below the bracket through the fan. This would ensure that the hot air is leaving the chip and going out of the case.
 Here are 2 photos showing how it should look like once attached. 
 
-![photo](main/DOCS/Photos/Fan_Bracket1.jpg)
+![photo](DOCS/Photos/Fan_Bracket1.jpg)
 
-![photo](main/DOCS/Photos/Fan_Bracket.jpg)
+![photo](DOCS/Photos/Fan_Bracket.jpg)
 
 
 Once this component is assembled, put it aside and we will use it in a few steps.
@@ -84,7 +84,7 @@ Once this component is assembled, put it aside and we will use it in a few steps
 [
 * We can then proceed to mount the '''Raspberry Pi''' onto the corresponding standoffs by securing it with '''M2.5x12mm Standoffs'''. Make sure that the side with the USB and Ethernet ports is near the edge of the case and not the other way around. The 12mm standoffs will be used to place the fan above the Pi.
 
-![photo](main/DOCS/Photos/Case_Bottom_threaded_insert.jpg)
+![photo](DOCS/Photos/Case_Bottom_threaded_insert.jpg)
 
 
 * From there, we can take the Bracket-Fan component that we assembled in the first step, and mount it onto the standoffs using '''M2.5x8mm screws'''. For an optimal wiring experience, be sure to orient the bracket such that a hole is placed above the Raspberry Pi GPIO pins.
@@ -99,7 +99,7 @@ Once this component is assembled, put it aside and we will use it in a few steps
 * Place the '''SDP810''' by passing its 2 nozzles through the 2 wider holes. Make sure that it is oriented the right way up, such that its mounting holes align with the threaded inserts we placed earlier. Use 2 '''M2.5x16mm''' screws to secure it into place.
 * The order of these steps is important since we cannot place the SDP810 once the BME280 is already placed. So once the SDP810 is mounted, we can now mount the '''BME280''' by inserting 3 '''M2.5x10mm screws'''. Make sure that the sensor component (the little box positioned in the middle) is facing outwards and aligned with the little opening.
 
-![photo](main/DOCS/Photos/Case_Insert_Overview.jpg)
+![photo](DOCS/Photos/Case_Insert_Overview.jpg)
 
 [
 ### Soldering Board
@@ -107,7 +107,7 @@ Once this component is assembled, put it aside and we will use it in a few steps
 
 * Using the small solder board, solder in a group of '''4 header pins''' for the RGB LED and a group of '''6 header pins''' for the rest of the sensors and the fan (the corresponding rows will be: 5V, 3.3V, SCL, SDA, Ground, Ground). The positioning is arbitrary, but in the photo, the header pins are placed in the upper row. These pins will be connected to the Pi with wires and the slots below them will connect to the various sensors. The use of the header pins allows us to rearrange a configuration without losing too much time. 
 
-![photo](main/DOCS/Photos/Solder_Board_Back.jpg)![photo](main/DOCS/Photos/Sensors_Insert.jpg)
+![photo](DOCS/Photos/Solder_Board_Back.jpg)![photo](main/DOCS/Photos/Sensors_Insert.jpg)
  In this photo, the 4 header pins for the RGB LED are placed on the far left, and the 6 others are placed on the right side of the board, all of which are on the top row.
 
 * Flip the board over and solder in the '''RGB LED''' below the 4 header pins. Once the LED has been soldered, solder in '''female header pins''' in the same arrangement as the image below. 
@@ -138,7 +138,7 @@ For the '''BME280''', the pins should be physically labeled, so no worries there
 
 For the '''Raspberry Pi''', this photo should help out a bit.
 
-![photo](main/DOCS/Photos/RPi4GPIO.jpg)![photo](main/DOCS/Photos/Solder_Board_Top.jpg)
+![photo](DOCS/Photos/RPi4GPIO.jpg)![photo](DOCS/Photos/Solder_Board_Top.jpg)
 
 
 *GPIO2 is for SDA and GPIO3 is for SCL.
@@ -154,7 +154,7 @@ At first, it may look a little messy...
 [
 but once the Pi is wired up and we orient things a little better, things can place out to look like this:
 
-![photo](main/DOCS/Photos/Wires_Pi.jpg)![photo](main/DOCS/Photos/Bunch_of_wires.jpg)
+![photo](DOCS/Photos/Wires_Pi.jpg)![photo](DOCS/Photos/Bunch_of_wires.jpg)
 
 ### Final Assembly
 
@@ -163,7 +163,7 @@ but once the Pi is wired up and we orient things a little better, things can pla
 * Finally, flip the case over one last time to secure the '''Case Lid''' onto the Main Body with 4 '''M2.5x8mm''' screws.
 
 
-![photo](main/DOCS/Photos/Final.jpg)
+![photo](DOCS/Photos/Final.jpg)
 
 # Known Issues
 

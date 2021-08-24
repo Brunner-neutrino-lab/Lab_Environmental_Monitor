@@ -32,14 +32,14 @@ All the essentials can be found under the Main_Folder.
 ## Data File Format
 The data being acquired is stored with headers....
 
-*'''timestamp:''' This is the time at which the data was taken. The format is YYYY-MM-DD hh:mm:ss.
-*'''Temperature_C:''' This is the temperature of the lab measured in Celsius. The readings should be around 21 degrees or so.
-*'''Pressure_Torr:''' This is the pressure of the lab in Torr. Typically, the readings should be near 760Torr, which is the equivalent of 1 atmosphere.
-*'''Percent_Humidity:''' This is the relative humidity in the air. At a given temperature, air can hold a certain amount of water vapor. Here it gives the ratio between the measured amount of water vapor present to the max carrying capacity at a given temperature.
-*'''Differential_Pressure_Pa:''' This is the difference in pressure between the 2 nobs on the SDP810, measured in Pascale. Once the SDP810 is placed inside the case, it will measure the pressure from the nozzle on right minus the pressure of the nozzle on the left, when viewed from this angle:
+* **timestamp:** This is the time at which the data was taken. The format is YYYY-MM-DD hh:mm:ss.
+* **Temperature_C:** This is the temperature of the lab measured in Celsius. The readings should be around 21 degrees or so.
+* **Pressure_Torr:** This is the pressure of the lab in Torr. Typically, the readings should be near 760Torr, which is the equivalent of 1 atmosphere.
+* **Percent_Humidity:** This is the relative humidity in the air. At a given temperature, air can hold a certain amount of water vapor. Here it gives the ratio between the measured amount of water vapor present to the max carrying capacity at a given temperature.
+* **Differential_Pressure_Pa:** This is the difference in pressure between the 2 nobs on the SDP810, measured in Pascale. Once the SDP810 is placed inside the case, it will measure the pressure from the nozzle on right minus the pressure of the nozzle on the left, when viewed from this angle: [https://github.com/Brunner-neutrino-lab/Lab_Environmental_Monitor/blob/main/DOCS/Photos/SDPNozzle.jpg]
 
-[
-It can give out both positive and negative values for the pressure difference, depending on which nozzle reads a higher pressure. This information comes from a diagram from this [https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/8_Differential_Pressure/Datasheets/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf data sheet ]([File:SDPNozzle.jpg|300px]]). 
+
+It can give out both positive and negative values for the pressure difference, depending on which nozzle reads a higher pressure. This information comes from a diagram from this [https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/8_Differential_Pressure/Datasheets/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf data sheet ]. 
 
 [
 The sensor will return the difference between the High pressure nozzle to the Low pressure one in the diagram.

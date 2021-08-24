@@ -9,7 +9,7 @@ ParticulateStatus = 1     #SPS30
 LightSignals = 1          #LED light to indicate when the system is running and when there are problems.
 
 Interval_Between_Scans = 1 # in minutes 
-csv_path = 'data/Environmental_Data.csv'  #Path to csv file
+csv_path = 'Environmental_Data.csv'  #Path to csv file
 
 #These are the port addresses and have to be modified if the values do not match when <i2cdetect -y 1> is run
 #The BME280 measures Temperature, Pressure and Humidity 

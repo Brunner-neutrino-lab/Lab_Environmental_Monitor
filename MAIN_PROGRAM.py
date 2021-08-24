@@ -15,7 +15,6 @@ while True:
             update_log.write(Sensors_Functions.data()+'\n')# the new line is to skip a line in the csv file so that all the columns are alligned.
             update_log.close()
         print(Sensors_Functions.data())
-        #This part uploads the .csv file to the database
         EndTime=time.time()
         if config.LightSignals==1:#if lights are connected, the waiting time will have rainbow lights, otherwise it'll be boring :((. At the end of the day, the waiting time stays the same, but the one with the rainbow LED will always be awesomer :D 
             Sensors_Functions.lights('rainbow',config.Interval_Between_Scans)

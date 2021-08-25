@@ -35,11 +35,11 @@ The data being acquired is stored with headers....
 * **Temperature_C:** This is the temperature of the lab measured in Celsius. The readings should be around 21 degrees or so.
 * **Pressure_Torr:** This is the pressure of the lab in Torr. Typically, the readings should be near 760Torr, which is the equivalent of 1 atmosphere.
 * **Percent_Humidity:** This is the relative humidity in the air. At a given temperature, air can hold a certain amount of water vapor. Here it gives the ratio between the measured amount of water vapor present to the max carrying capacity at a given temperature.
-* **Differential_Pressure_Pa:** This is the difference in pressure between the 2 nobs on the SDP810, measured in Pascale. Once the SDP810 is placed inside the case, it will measure the pressure from the nozzle on right minus the pressure of the nozzle on the left, when viewed from this angle: ![photo](DOCS/Photos/SDPNozzle.jpg)
+* **Differential_Pressure_Pa:** This is the difference in pressure between the 2 nobs on the SDP810, measured in Pascale. Once the SDP810 is placed inside the case, it will measure the pressure from the nozzle on right minus the pressure of the nozzle on the left, when viewed from this angle: ![](DOCS/Photos/SDPNozzle.jpg)
 
 
 It can give out both positive and negative values for the pressure difference, depending on which nozzle reads a higher pressure. This information comes from a diagram from this [data sheet](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/8_Differential_Pressure/Datasheets/Sensirion_Differential_Pressure_Datasheet_SDP8xx_Digital.pdf). 
-![photo](DOCS/Photos/SDP810_Sketch.png)
+![](DOCS/Photos/SDP810_Sketch.png)
 
 The sensor will return the difference between the High pressure nozzle to the Low pressure one in the diagram.
 
@@ -55,7 +55,7 @@ The sensor will return the difference between the High pressure nozzle to the Lo
 * **Typical_Particle_Size_um:** The typical particle size (TPS) gives an indication on the average particle diameter in the sample aerosol in um. Such output correlates with the weighted average of the number concentration bins measured with a TSI 3330 optical particle sizer. Consequently, lighter aerosols will have smaller TPS values than heavier aerosols.
 
 # Physical Design 
-Once all the components have been acquired (Raspberry Pi and sensors), a case has been designed to package everything together. The case is 3d printed and the ''SolidWorks'' design files can be found in this [https://workbench.grabcad.com/workbench/projects/gcHzfLMLa-HXbQJv8QlMMii0fpi4dDAn0PsYPM48OZWLoZ#/folder/10605921 GrabCAD project]. At the moment, we are using the **Top_Fan_configuration** design, where the fan lies above the Raspberry Pi to cool it off. In that folder, the **3D print** folder contains all the parts that have to be printed (lid, main body, fan bracket, bottom case).
+Once all the components have been acquired (Raspberry Pi and sensors), a case has been designed to package everything together. The case is 3d printed and the **SolidWorks** design files can be found on [thingiverse](https://www.thingiverse.com/). At the moment, we are using the **Top_Fan_configuration** design, where the fan lies above the Raspberry Pi to cool it off. In that folder, the **3D print** folder contains all the parts that have to be printed (lid, main body, fan bracket, bottom case).
 
 ## Assembly Instructions (Top Fan Configuration)
 
@@ -80,15 +80,16 @@ Once this component is assembled, put it aside and we will use it in a few steps
 * Heat up and place the '''M2.5 threaded inserts''' into the 4 prearranged holes near the vent slits. They will be used to mount the Raspberry Pi.
 * Once placed, screw in the '''M2.5x6mm Standoffs'''.
 
-[
-* We can then proceed to mount the '''Raspberry Pi''' onto the corresponding standoffs by securing it with '''M2.5x12mm Standoffs'''. Make sure that the side with the USB and Ethernet ports is near the edge of the case and not the other way around. The 12mm standoffs will be used to place the fan above the Pi.
-
 ![photo](DOCS/Photos/Case_Bottom_threaded_insert.jpg)
 
+* We can then proceed to mount the '''Raspberry Pi''' onto the corresponding standoffs by securing it with '''M2.5x12mm Standoffs'''. Make sure that the side with the USB and Ethernet ports is near the edge of the case and not the other way around. The 12mm standoffs will be used to place the fan above the Pi.
+
+![photo](DOCS/Photos/Case_Fan.jpg)
 
 * From there, we can take the Bracket-Fan component that we assembled in the first step, and mount it onto the standoffs using '''M2.5x8mm screws'''. For an optimal wiring experience, be sure to orient the bracket such that a hole is placed above the Raspberry Pi GPIO pins.
 
-[
+![photo](DOCS/Photos/Case_Pi.jpg)
+
 ### Main Body
 
 

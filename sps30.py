@@ -4,7 +4,8 @@ from time import sleep
 import config
 
 '''
-This program is dedicated for the SPS30 dust sensor. Since it has slightly more functions, it was easier to just create an independant program for it.
+All credits goes to Feyzi Kesim, link to their repo: https://github.com/feyzikesim/sps30
+This program is dedicated for the SPS30 dust sensor. Since it has slightly more functions, it was easier to just create an independant script for it.
 '''
 
 def calculateCRC(input):
@@ -229,14 +230,7 @@ class SPS30():
             self.dict_values[i] = convertPMValues(pm_list[index])
             index += 1
 
-
-
-
 sps = SPS30(1)
 sps.start_measurement()
 sleep(1)
-
-
-
-
 

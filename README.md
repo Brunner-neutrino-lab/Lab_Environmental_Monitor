@@ -41,17 +41,10 @@ sudo pip3 install RPi.bme280
 
 Make sure everything is properly set up and that all the criteria below are met:
 - i2c is enabled on the Raspberry Pi.
-- The sensors are wired accordingly to the wiring [**diagram**](https://github.com/Brunner-neutrino-lab/Lab_Environmental_Monitor/blob/main/DOCS/Photos/Wiring_Diagram.png).
+- The sensors are wired accordingly to the wiring [**diagram**](http://132.206.126.37/bvllab/particulate-sensor/blob/master/DOCS/Photos/Wiring_Diagram.png).
 - The addresses from `i2cdetect -y 1` match the ones found in the `config.py` file.
 
-**Running when connected to a monitor and keyboard/mouse**
-If all the requirements above are met, from the folder that contains the `MAIN_PROGRAM.py` program, press `F4` to open the console for that specific folder. Once opened, simply run `sudo python3 MAIN_PROGRAM.py` and it should start running and collecting data. It should print out `Starting!` and the LED should cycle through the colors of the rainbow. If the LED stays red, it means that an error has occured which should be printed in the terminal. 
-
-**Running with remote ssh**
-To remote ssh into the Pi, open *windows powershell* and type in `ssh` followed by its ip address. To allow the program to run even if we close the terminal, we will use **Linux screen**. To download it, simply type in `sudo apt install screen`. If you run `screen -ls` and no screens are present, run `screen -S session_name`, where we can name the session as we want. Once inside a screen session, navigate through the directories until you are in the Main_Folder. From there, run `sudo python3 MAIN_PROGRAM.py`. 
-
-To be able to close the terminal without affecting the running program, perform `ctrl+a` `d` to detach the screen. From here you can close the terminal without any problems. The next time you will connect to the Pi and see an active screen after typing `screen -ls` you just need to run `screen -r` to resume it. For more help and guidance, go [here](https://linuxize.com/post/how-to-use-linux-screen/).
-
+Navigate through the directories until you are in the Main Folder. From there, run `nohup sudo python3 MAIN_PROGRAM.py &`. The nohup allows it to run even when the terminal is closed and the `&` symbol allows it to run as a background app. 
 
 ----------------
 

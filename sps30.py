@@ -232,5 +232,5 @@ class SPS30():
 
 sps = SPS30(1)
 sps.start_measurement()
-sleep(1)
+sleep(2)
 
